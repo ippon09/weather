@@ -1,0 +1,314 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+
+.container {
+    padding-right: 20%;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    height: 30vh;
+    background-image: linear-gradient(45deg, #EC3992, #FF5778, #FF7F61, #FFA953, #FFD256, #F9F871);
+    animation: move 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+
+.main_text {
+    color: #fff;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+.serach_block {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search_input {
+    padding: 20px;
+    background: #fff;
+    width: 800px;
+    height: 100px;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.search_btn {
+    background: red;
+    padding: 20px 60px;
+    border-radius: 0px 5px 5px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+.weather_card {
+    margin-top: 150px;
+    width: 800px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 100px -3px #00000071;
+    font-size: 40px;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.weather_card::before {
+    content: '';
+    width: calc(100% - 20px);
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    left: 10px;
+    bottom: -10px;
+    box-shadow: 0px 0px 100px -3px #00000071;
+}
+
+.weather_card_main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weather_left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+
+}
+
+.weather_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.forecast{
+    background: red;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.weather_location {
+    display: flex;
+    flex-wrap: nowrap;
+    left: 20px;
+    gap: 60px;
+}
+
+.weather_descr {
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.location {
+    display: flex;
+    gap: 20px;
+}
+
+.weather_img {
+    width: 150px;
+}
+
+.temperature {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.weather_state {
+    text-transform: uppercase;
+    letter-spacing: 2.2;
+}
+
+.cityName {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.cityIndex {
+    font-size: 30px;
+    background: red;
+    padding: 12px 12px;
+    border-radius: 20px;
+}
+
+/* body {
+    background: gray;
+} */
+.sevenDays{
+    margin-top: 40px;
+    text-align: center;
+}
+.day img{
+    width: 35px;
+}
+.day{
+    font-size: 26px;
+    text-align: center;
+
+}
+.wheather_card_bottom{
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.data{
+    font-size: 19px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@keyframes move {
+    25% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+
+    }
+
+    75% {
+        background-position: 0% 100%;
+
+    }
+
+    100% {
+        background-position: 0% 0%;
+
+    }
+
+
+}
